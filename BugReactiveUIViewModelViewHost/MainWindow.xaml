@@ -1,0 +1,24 @@
+﻿<rx:ReactiveWindow x:Class="BugReactiveUIViewModelViewHost.MainWindow"
+                   x:TypeArguments="local:MainViewModel"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   xmlns:rx="http://reactiveui.net"
+                   xmlns:local="clr-namespace:BugReactiveUIViewModelViewHost"
+                   mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+                   Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="SwitchViewButton" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5,2">
+            Switch View
+        </Button>
+
+        <rx:ViewModelViewHost x:Name="Host" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                              HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+    </Grid>
+</rx:ReactiveWindow>
